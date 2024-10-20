@@ -438,7 +438,7 @@ app.put('/api/login', async (req, res) => {
         res.status(500).json({ message: 'Server error', error });
     }
 });
-
+app.options('*', cors());
 // Test route to check if API is running
 app.get('/', (req, res) => {
     res.send('API is running...');
